@@ -61,7 +61,7 @@ function aeeik_plugin_loaded() {
         add_action('wp_ajax_aeeik_issue_invoice', 'aeeik_ajax_issue_invoice' );
         add_action('wp_ajax_aeeik_invalid_invoice', 'aeeik_ajax_invalid_invoice' );
         add_action('wp_ajax_aeeik_edit_invoice_meta', 'aeeik_ajax_edit_invoice_meta' );
-        load_plugin_textdomain('allpay-e-invoice');
+        load_plugin_textdomain('allpay-e-invoice',false,plugin_basename(dirname( __FILE__ )).'/languages');
     }
 }
 function aeeik_ajax_edit_invoice_meta(){
